@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto LI2 Grupo 4 PL 7: Código-Fonte de stack.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto LI2 Grupo 4 PL 7
+   &#160;<span id="projectnumber">0.4</span>
+   </div>
+   <div id="projectbrief">Interpretador de uma linguagem</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stack_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stack.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stack_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="stack_8h.html#af24298a5ce56647751e432673282c6e2">    1</a></span>&#160;<span class="preprocessor">#define MAX_STACK 100000</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="stack_8h.html#ab5187269936538ffb8ccbbe7115ffdbc">    2</a></span>&#160;<span class="preprocessor">#define MAX_STRING 10000</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7">    4</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7adf35c44092249df12865ec3ca08eb000">    5</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7adf35c44092249df12865ec3ca08eb000">Char</a>, </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7a637b69dea56f804278aa50e975337e01">    6</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7a637b69dea56f804278aa50e975337e01">Int</a>,</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7afbe5087b942deaaa3202c7ca87dbc327">    7</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7afbe5087b942deaaa3202c7ca87dbc327">Long</a>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7ad67b0ee7230dcecb610254e4e5e589cd">    8</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7ad67b0ee7230dcecb610254e4e5e589cd">Float</a>, </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7ade17ec82ff106e0c2b4417f5ca231eae">    9</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7ade17ec82ff106e0c2b4417f5ca231eae">String</a>, </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7afb7825ebed9ad96348ee8588d84db633">   10</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7afb7825ebed9ad96348ee8588d84db633">Double</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7af8303e03242532eebd970f40ee509689">   11</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7af8303e03242532eebd970f40ee509689">Array</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7a891fbec6fb0d74aea9e064d13b59c9e0">   12</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7a891fbec6fb0d74aea9e064d13b59c9e0">Empty</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;} <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7">TYPE</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">struct </span><a class="code" href="structSTACK__Elem.html">STACK_Elem</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structSTACK.html">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structSTACK.html">STACK</a>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structSTACK.html#ae665018fd4d5c7a3195de56e5d40190e">   18</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structSTACK__Elem.html">STACK_Elem</a> *<a class="code" href="structSTACK.html#ae665018fd4d5c7a3195de56e5d40190e">stack</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structSTACK.html#a1b186cf876dace2f1e30fcbe260cad9a">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structSTACK.html#a1b186cf876dace2f1e30fcbe260cad9a">sp</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <a class="code" href="stack_8h.html#a3d36f5af7c0218824ce98c10cb353bc5">STACK</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structSTACK__Elem.html">   22</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structSTACK__Elem.html">STACK_Elem</a>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structSTACK__Elem.html#ab9974020d457cb0a5ff9053dcba2551c">   23</a></span>&#160;    <a class="code" href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7">TYPE</a> <a class="code" href="structSTACK__Elem.html#ab9974020d457cb0a5ff9053dcba2551c">t</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html">   24</a></span>&#160;    <span class="keyword">union </span><a class="code" href="unionSTACK__Elem_1_1saved__value.html">saved_value</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#a293444b3a6db714e163210d5ccbf6162">   25</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="unionSTACK__Elem_1_1saved__value.html#a293444b3a6db714e163210d5ccbf6162">c</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#a6b6387f782209d0f5c7ce621ee5388ec">   26</a></span>&#160;        <span class="keywordtype">char</span> *<a class="code" href="unionSTACK__Elem_1_1saved__value.html#a6b6387f782209d0f5c7ce621ee5388ec">str</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#a4fdea0562ab893b8f139957c220e918a">   27</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="unionSTACK__Elem_1_1saved__value.html#a4fdea0562ab893b8f139957c220e918a">d</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#ae486716b4b30acd38184b690a1060551">   28</a></span>&#160;        <span class="keywordtype">long</span> <a class="code" href="unionSTACK__Elem_1_1saved__value.html#ae486716b4b30acd38184b690a1060551">l</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#a479b9e9629c0dae37070f701f8bd7f71">   29</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="unionSTACK__Elem_1_1saved__value.html#a479b9e9629c0dae37070f701f8bd7f71">f</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#ae7ef26331b4caa93c1b7a32986cb75dd">   30</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="unionSTACK__Elem_1_1saved__value.html#ae7ef26331b4caa93c1b7a32986cb75dd">i</a>; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="unionSTACK__Elem_1_1saved__value.html#a1a30047b290faad0a1ba7faf4becb732">   31</a></span>&#160;        <a class="code" href="structSTACK.html">STACK</a>* <a class="code" href="unionSTACK__Elem_1_1saved__value.html#a1a30047b290faad0a1ba7faf4becb732">arr</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    } <a class="code" href="structSTACK__Elem.html#a0d04a2f368871d1d1420e19c6d7c59ab">saved_value</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <a class="code" href="stack_8h.html#a9c9582ef83c5b980dd751264a59e7b03">STACK_Elem</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="structSTACK.html">STACK</a> *<a class="code" href="stack_8h.html#a4002d1ff72ad115103ac2daef3200bc5">new_stack</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stack_8h.html#a04b577a31f9ef9e4a32f9b5401ffa687">push</a>(<a class="code" href="structSTACK.html">STACK</a> *s, <a class="code" href="structSTACK__Elem.html">STACK_Elem</a> elem);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="code" href="structSTACK__Elem.html">STACK_Elem</a> <a class="code" href="stack_8h.html#aa8364ba7a6ed7e06df066ec9055929c8">pop</a>(<a class="code" href="structSTACK.html">STACK</a> *s);</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7af8303e03242532eebd970f40ee509689"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7af8303e03242532eebd970f40ee509689">Array</a></div><div class="ttdeci">@ Array</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00011">stack.h:11</a></div></div>
+<div class="ttc" id="astructSTACK__Elem_html_a0d04a2f368871d1d1420e19c6d7c59ab"><div class="ttname"><a href="structSTACK__Elem.html#a0d04a2f368871d1d1420e19c6d7c59ab">STACK_Elem::saved_value</a></div><div class="ttdeci">union STACK_Elem::saved_value saved_value</div></div>
+<div class="ttc" id="astructSTACK_html"><div class="ttname"><a href="structSTACK.html">STACK</a></div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00017">stack.h:17</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_a479b9e9629c0dae37070f701f8bd7f71"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#a479b9e9629c0dae37070f701f8bd7f71">STACK_Elem::saved_value::f</a></div><div class="ttdeci">float f</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00029">stack.h:29</a></div></div>
+<div class="ttc" id="astructSTACK__Elem_html_ab9974020d457cb0a5ff9053dcba2551c"><div class="ttname"><a href="structSTACK__Elem.html#ab9974020d457cb0a5ff9053dcba2551c">STACK_Elem::t</a></div><div class="ttdeci">TYPE t</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00023">stack.h:23</a></div></div>
+<div class="ttc" id="astack_8h_html_a4002d1ff72ad115103ac2daef3200bc5"><div class="ttname"><a href="stack_8h.html#a4002d1ff72ad115103ac2daef3200bc5">new_stack</a></div><div class="ttdeci">STACK * new_stack()</div><div class="ttdef"><b>Definition:</b> <a href="stack_8c_source.html#l00004">stack.c:4</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_a4fdea0562ab893b8f139957c220e918a"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#a4fdea0562ab893b8f139957c220e918a">STACK_Elem::saved_value::d</a></div><div class="ttdeci">double d</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00027">stack.h:27</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7a891fbec6fb0d74aea9e064d13b59c9e0"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7a891fbec6fb0d74aea9e064d13b59c9e0">Empty</a></div><div class="ttdeci">@ Empty</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00012">stack.h:12</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7afbe5087b942deaaa3202c7ca87dbc327"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7afbe5087b942deaaa3202c7ca87dbc327">Long</a></div><div class="ttdeci">@ Long</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00007">stack.h:7</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7afb7825ebed9ad96348ee8588d84db633"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7afb7825ebed9ad96348ee8588d84db633">Double</a></div><div class="ttdeci">@ Double</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00010">stack.h:10</a></div></div>
+<div class="ttc" id="astack_8h_html_a04b577a31f9ef9e4a32f9b5401ffa687"><div class="ttname"><a href="stack_8h.html#a04b577a31f9ef9e4a32f9b5401ffa687">push</a></div><div class="ttdeci">void push(STACK *s, STACK_Elem elem)</div><div class="ttdef"><b>Definition:</b> <a href="stack_8c_source.html#l00011">stack.c:11</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7adf35c44092249df12865ec3ca08eb000"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7adf35c44092249df12865ec3ca08eb000">Char</a></div><div class="ttdeci">@ Char</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00005">stack.h:5</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_a293444b3a6db714e163210d5ccbf6162"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#a293444b3a6db714e163210d5ccbf6162">STACK_Elem::saved_value::c</a></div><div class="ttdeci">char c</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00025">stack.h:25</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_a6b6387f782209d0f5c7ce621ee5388ec"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#a6b6387f782209d0f5c7ce621ee5388ec">STACK_Elem::saved_value::str</a></div><div class="ttdeci">char * str</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00026">stack.h:26</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7ad67b0ee7230dcecb610254e4e5e589cd"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7ad67b0ee7230dcecb610254e4e5e589cd">Float</a></div><div class="ttdeci">@ Float</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00008">stack.h:8</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7ade17ec82ff106e0c2b4417f5ca231eae"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7ade17ec82ff106e0c2b4417f5ca231eae">String</a></div><div class="ttdeci">@ String</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00009">stack.h:9</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html">STACK_Elem::saved_value</a></div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00024">stack.h:24</a></div></div>
+<div class="ttc" id="astack_8h_html_aa8364ba7a6ed7e06df066ec9055929c8"><div class="ttname"><a href="stack_8h.html#aa8364ba7a6ed7e06df066ec9055929c8">pop</a></div><div class="ttdeci">STACK_Elem pop(STACK *s)</div><div class="ttdef"><b>Definition:</b> <a href="stack_8c_source.html#l00016">stack.c:16</a></div></div>
+<div class="ttc" id="astructSTACK_html_ae665018fd4d5c7a3195de56e5d40190e"><div class="ttname"><a href="structSTACK.html#ae665018fd4d5c7a3195de56e5d40190e">STACK::stack</a></div><div class="ttdeci">struct STACK_Elem * stack</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00018">stack.h:18</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_ae486716b4b30acd38184b690a1060551"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#ae486716b4b30acd38184b690a1060551">STACK_Elem::saved_value::l</a></div><div class="ttdeci">long l</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00028">stack.h:28</a></div></div>
+<div class="ttc" id="astructSTACK_html_a1b186cf876dace2f1e30fcbe260cad9a"><div class="ttname"><a href="structSTACK.html#a1b186cf876dace2f1e30fcbe260cad9a">STACK::sp</a></div><div class="ttdeci">int sp</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00019">stack.h:19</a></div></div>
+<div class="ttc" id="astructSTACK__Elem_html"><div class="ttname"><a href="structSTACK__Elem.html">STACK_Elem</a></div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00022">stack.h:22</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_ae7ef26331b4caa93c1b7a32986cb75dd"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#ae7ef26331b4caa93c1b7a32986cb75dd">STACK_Elem::saved_value::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00030">stack.h:30</a></div></div>
+<div class="ttc" id="astack_8h_html_a3d36f5af7c0218824ce98c10cb353bc5"><div class="ttname"><a href="stack_8h.html#a3d36f5af7c0218824ce98c10cb353bc5">STACK</a></div><div class="ttdeci">struct STACK STACK</div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7">TYPE</a></div><div class="ttdeci">TYPE</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00004">stack.h:4</a></div></div>
+<div class="ttc" id="aunionSTACK__Elem_1_1saved__value_html_a1a30047b290faad0a1ba7faf4becb732"><div class="ttname"><a href="unionSTACK__Elem_1_1saved__value.html#a1a30047b290faad0a1ba7faf4becb732">STACK_Elem::saved_value::arr</a></div><div class="ttdeci">STACK * arr</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00031">stack.h:31</a></div></div>
+<div class="ttc" id="astack_8h_html_a0bc6723d5d4776ab7cdc646728b775f7a637b69dea56f804278aa50e975337e01"><div class="ttname"><a href="stack_8h.html#a0bc6723d5d4776ab7cdc646728b775f7a637b69dea56f804278aa50e975337e01">Int</a></div><div class="ttdeci">@ Int</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00006">stack.h:6</a></div></div>
+<div class="ttc" id="astack_8h_html_a9c9582ef83c5b980dd751264a59e7b03"><div class="ttname"><a href="stack_8h.html#a9c9582ef83c5b980dd751264a59e7b03">STACK_Elem</a></div><div class="ttdeci">struct STACK_Elem STACK_Elem</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="stack_8h.html">stack.h</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

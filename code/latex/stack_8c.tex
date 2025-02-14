@@ -1,0 +1,80 @@
+\hypertarget{stack_8c}{}\doxysection{Referência ao ficheiro stack.\+c}
+\label{stack_8c}\index{stack.c@{stack.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stack.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para stack.\+c\+:
+% FIG 0
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro\+:
+% FIG 1
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSTACK}{S\+T\+A\+CK}} $\ast$ \mbox{\hyperlink{stack_8c_a4002d1ff72ad115103ac2daef3200bc5}{new\+\_\+stack}} ()
+\item 
+void \mbox{\hyperlink{stack_8c_a04b577a31f9ef9e4a32f9b5401ffa687}{push}} (\mbox{\hyperlink{structSTACK}{S\+T\+A\+CK}} $\ast$s, \mbox{\hyperlink{structSTACK__Elem}{S\+T\+A\+C\+K\+\_\+\+Elem}} elem)
+\item 
+\mbox{\hyperlink{structSTACK__Elem}{S\+T\+A\+C\+K\+\_\+\+Elem}} \mbox{\hyperlink{stack_8c_aa8364ba7a6ed7e06df066ec9055929c8}{pop}} (\mbox{\hyperlink{structSTACK}{S\+T\+A\+CK}} $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{stack_8c_a4002d1ff72ad115103ac2daef3200bc5}\label{stack_8c_a4002d1ff72ad115103ac2daef3200bc5}} 
+\index{stack.c@{stack.c}!new\_stack@{new\_stack}}
+\index{new\_stack@{new\_stack}!stack.c@{stack.c}}
+\doxysubsubsection{\texorpdfstring{new\_stack()}{new\_stack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSTACK}{S\+T\+A\+CK}}$\ast$ new\+\_\+stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definido na linha 4 do ficheiro stack.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                    \{}
+\DoxyCodeLine{5     \mbox{\hyperlink{structSTACK}{STACK}} *s = (\mbox{\hyperlink{structSTACK}{STACK}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structSTACK}{STACK}}));}
+\DoxyCodeLine{6     s-\/>\mbox{\hyperlink{structSTACK_ae665018fd4d5c7a3195de56e5d40190e}{stack}} = (\mbox{\hyperlink{structSTACK__Elem}{STACK\_Elem}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structSTACK__Elem}{STACK\_Elem}}) * 100000);}
+\DoxyCodeLine{7     s-\/>\mbox{\hyperlink{structSTACK_a1b186cf876dace2f1e30fcbe260cad9a}{sp}} = 0;}
+\DoxyCodeLine{8     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stack_8c_aa8364ba7a6ed7e06df066ec9055929c8}\label{stack_8c_aa8364ba7a6ed7e06df066ec9055929c8}} 
+\index{stack.c@{stack.c}!pop@{pop}}
+\index{pop@{pop}!stack.c@{stack.c}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSTACK__Elem}{S\+T\+A\+C\+K\+\_\+\+Elem}} pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSTACK}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definido na linha 16 do ficheiro stack.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                          \{ }
+\DoxyCodeLine{17     \mbox{\hyperlink{structSTACK__Elem}{STACK\_Elem}} ret;}
+\DoxyCodeLine{18     \textcolor{keywordflow}{if} (s-\/>\mbox{\hyperlink{structSTACK_a1b186cf876dace2f1e30fcbe260cad9a}{sp}} > 0) \{}
+\DoxyCodeLine{19         ret = s-\/>\mbox{\hyperlink{structSTACK_ae665018fd4d5c7a3195de56e5d40190e}{stack}}[s-\/>\mbox{\hyperlink{structSTACK_a1b186cf876dace2f1e30fcbe260cad9a}{sp}}];}
+\DoxyCodeLine{20         s-\/>\mbox{\hyperlink{structSTACK_a1b186cf876dace2f1e30fcbe260cad9a}{sp}}-\/-\/;}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stack_8c_a04b577a31f9ef9e4a32f9b5401ffa687}\label{stack_8c_a04b577a31f9ef9e4a32f9b5401ffa687}} 
+\index{stack.c@{stack.c}!push@{push}}
+\index{push@{push}!stack.c@{stack.c}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSTACK}{S\+T\+A\+CK}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{structSTACK__Elem}{S\+T\+A\+C\+K\+\_\+\+Elem}}}]{elem }\end{DoxyParamCaption})}
+
+
+
+Definido na linha 11 do ficheiro stack.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                                      \{}
+\DoxyCodeLine{12     s-\/>\mbox{\hyperlink{structSTACK_a1b186cf876dace2f1e30fcbe260cad9a}{sp}}++;}
+\DoxyCodeLine{13     s-\/>\mbox{\hyperlink{structSTACK_ae665018fd4d5c7a3195de56e5d40190e}{stack}}[s-\/>\mbox{\hyperlink{structSTACK_a1b186cf876dace2f1e30fcbe260cad9a}{sp}}] = elem;}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
