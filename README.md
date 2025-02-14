@@ -1,5 +1,4 @@
-# LEIPL7G04
-Projeto de Laboratórios de Informática II - PL7 Grupo 04.
+# Laboratórios de Informática II
 
 Guião 1 - Feito;
 
