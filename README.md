@@ -1,5 +1,9 @@
 # Laboratórios de Informática II
 
+<h3 align="center"> 🎖️ Nota - 13,4 / 15 🎖️ </h3>
+
+<div align="center">
+  
 **Guião 1 -** 100/100;
 
 **Guião 2 -** 100/100;
@@ -15,5 +19,6 @@
 **Documentação -** 97/100;
 
 **Legibilidade -** 100/100;
+</div>
 
-**Total -** 13,4 / 15
+
